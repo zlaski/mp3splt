@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(registry:HKEY_CURRENT_USER\SOFTWARE\Akisystems\akibld@Sources)akibld-con.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{44418220-24E1-4886-BED7-BCE899334FF5}</ProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)libmp3splt\include;%(AdditionalIncludeDirectories);$(OutDir)..\include\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005;4013;4018;4047;4090;4100;4115;4127;4133;4206;4244;4267;4305;4456;4459;4702;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>__WIN32__;NO_PCRE;NO_%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="$(ProjectName).pre.bat" />
+    <None Include="$(ProjectName).post.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libmp3splt\src\audacity.c" />
+    <ClCompile Include="libmp3splt\src\cddb.c" />
+    <ClCompile Include="libmp3splt\src\cddb_cue_common.c" />
+    <ClCompile Include="libmp3splt\src\checks.c" />
+    <ClCompile Include="libmp3splt\src\client.c" />
+    <ClCompile Include="libmp3splt\src\conversions.c" />
+    <ClCompile Include="libmp3splt\src\cue.c" />
+    <ClCompile Include="libmp3splt\src\debug.c" />
+    <ClCompile Include="libmp3splt\src\errors.c" />
+    <ClCompile Include="libmp3splt\src\filename_regex.c" />
+    <ClCompile Include="libmp3splt\src\freedb.c" />
+    <ClCompile Include="libmp3splt\src\freedb_utils.c" />
+    <ClCompile Include="libmp3splt\src\input_output.c" />
+    <ClCompile Include="libmp3splt\src\mp3splt.c" />
+    <ClCompile Include="libmp3splt\src\oformat_parser.c" />
+    <ClCompile Include="libmp3splt\src\options.c" />
+    <ClCompile Include="libmp3splt\src\output_format.c" />
+    <ClCompile Include="libmp3splt\src\pair.c" />
+    <ClCompile Include="libmp3splt\src\plugins.c" />
+    <ClCompile Include="libmp3splt\src\proxy.c" />
+    <ClCompile Include="libmp3splt\src\silence_utils.c" />
+    <ClCompile Include="libmp3splt\src\socket_manager.c" />
+    <ClCompile Include="libmp3splt\src\split_points.c" />
+    <ClCompile Include="libmp3splt\src\splt.c" />
+    <ClCompile Include="libmp3splt\src\splt_array.c" />
+    <ClCompile Include="libmp3splt\src\string_utils.c" />
+    <ClCompile Include="libmp3splt\src\sync_errors.c" />
+    <ClCompile Include="libmp3splt\src\tags_parser.c" />
+    <ClCompile Include="libmp3splt\src\tags_utils.c" />
+    <ClCompile Include="libmp3splt\src\types_func.c" />
+    <ClCompile Include="libmp3splt\src\utils.c" />
+    <ClCompile Include="libmp3splt\src\win32.c" />
+    <ClCompile Include="libmp3splt\src\wrap.c" />
+    <ClCompile Include="newmp3splt\src\data_manager.c" />
+    <ClCompile Include="newmp3splt\src\freedb.c" />
+    <ClCompile Include="newmp3splt\src\mp3splt.c" />
+    <ClCompile Include="newmp3splt\src\options_checker.c" />
+    <ClCompile Include="newmp3splt\src\options_manager.c" />
+    <ClCompile Include="newmp3splt\src\options_parsers.c" />
+    <ClCompile Include="newmp3splt\src\print_utils.c" />
+    <ClCompile Include="newmp3splt\src\utils.c" />
+    <ClCompile Include="newmp3splt\src\windows_utils.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libmp3splt\src\audacity.h" />
+    <ClInclude Include="libmp3splt\src\cddb.h" />
+    <ClInclude Include="libmp3splt\src\cddb_cue_common.h" />
+    <ClInclude Include="libmp3splt\src\checks.h" />
+    <ClInclude Include="libmp3splt\src\client.h" />
+    <ClInclude Include="libmp3splt\src\conversions.h" />
+    <ClInclude Include="libmp3splt\src\cue.h" />
+    <ClInclude Include="libmp3splt\src\debug.h" />
+    <ClInclude Include="libmp3splt\src\errors.h" />
+    <ClInclude Include="libmp3splt\src\filename_regex.h" />
+    <ClInclude Include="libmp3splt\src\freedb.h" />
+    <ClInclude Include="libmp3splt\src\freedb_utils.h" />
+    <ClInclude Include="libmp3splt\src\input_output.h" />
+    <ClInclude Include="libmp3splt\src\oformat_parser.h" />
+    <ClInclude Include="libmp3splt\src\options.h" />
+    <ClInclude Include="libmp3splt\src\output_format.h" />
+    <ClInclude Include="libmp3splt\src\pair.h" />
+    <ClInclude Include="libmp3splt\src\plugins.h" />
+    <ClInclude Include="libmp3splt\src\proxy.h" />
+    <ClInclude Include="libmp3splt\src\silence_utils.h" />
+    <ClInclude Include="libmp3splt\src\socket_manager.h" />
+    <ClInclude Include="libmp3splt\src\split_points.h" />
+    <ClInclude Include="libmp3splt\src\splt.h" />
+    <ClInclude Include="libmp3splt\src\splt_array.h" />
+    <ClInclude Include="libmp3splt\src\string_utils.h" />
+    <ClInclude Include="libmp3splt\src\sync_errors.h" />
+    <ClInclude Include="libmp3splt\src\tags_parser.h" />
+    <ClInclude Include="libmp3splt\src\tags_utils.h" />
+    <ClInclude Include="libmp3splt\src\types_func.h" />
+    <ClInclude Include="libmp3splt\src\utils.h" />
+    <ClInclude Include="libmp3splt\src\win32.h" />
+    <ClInclude Include="libmp3splt\src\wrap.h" />
+    <ClInclude Include="newmp3splt\src\common.h" />
+    <ClInclude Include="newmp3splt\src\data_manager.h" />
+    <ClInclude Include="newmp3splt\src\freedb.h" />
+    <ClInclude Include="newmp3splt\src\options_checker.h" />
+    <ClInclude Include="newmp3splt\src\options_manager.h" />
+    <ClInclude Include="newmp3splt\src\options_parsers.h" />
+    <ClInclude Include="newmp3splt\src\print_utils.h" />
+    <ClInclude Include="newmp3splt\src\utils.h" />
+    <ClInclude Include="newmp3splt\src\windows_utils.h" />
+  </ItemGroup>
+</Project>
