@@ -35,13 +35,19 @@
 
 #include <stdio.h>
 #include <sys/types.h>
+#include <stdlib.h>
 
-//libtool 1.4e is buggy on mingw if we include ltdl.h
 #ifndef __WIN32__
 #include <ltdl.h>
+#else
+#define lt_dlinit() 0
+#define lt_dlclose(handle)
+#define lt_dlopen(filename) 0
+#define lt_dlerror() "*** LTDL NOT LINKED IN ***"
+#define lt_dlsym(handle, name) 0
 #endif
 
-#include "mp3splt.h"
+#include <libmp3splt/mp3splt.h>
 
 struct _splt_freedb_one_result {
   /**
@@ -670,8 +676,10 @@ struct _splt_state {
 
 #ifdef __WIN32__
 
+#ifndef fseeko
 #define fseeko fseeko64
 #define ftello ftello64
+#endif
 
 #else
 

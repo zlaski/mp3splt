@@ -43,13 +43,12 @@ int scandir(const char *dir, struct dirent ***namelist,
 		int(*filter)(const struct dirent *),
 		int(*compar)(const struct dirent **, const struct dirent **));
 
-int wscandir(const char *dir, struct _wdirent ***namelist,
-		int(*filter)(const struct _wdirent *),
-		int(*compar)(const struct _wdirent **, const struct _wdirent **));
+int wscandir(const wchar_t *dir, struct wdirent ***namelist,
+		int(*filter)(const struct wdirent *),
+		int(*compar)(const struct wdirent **, const struct wdirent **));
 
 int alphasort(const struct dirent **a, const struct dirent **b);
-
-int walphasort(const struct _wdirent **a, const struct _wdirent **b);
+int walphasort(const struct wdirent **a, const struct wdirent **b);
 
 char *splt_w32_utf16_to_utf8(const wchar_t *source);
 wchar_t *splt_w32_utf8_to_utf16(const char *source);

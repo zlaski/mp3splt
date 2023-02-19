@@ -537,7 +537,7 @@ void splt_sp_join_minimum_tracks_splitpoints(splt_state *state, int *error)
   {
     long number_of_intervals = splt_array_length(intervals);
 
-    int indexes_to_remove[state->split.points->real_splitnumber];
+    int *indexes_to_remove = (int *)malloc(sizeof(int) * state->split.points->real_splitnumber);
     int number_of_indexes_to_remove = 0;
 
     long i = 0;
@@ -549,10 +549,10 @@ void splt_sp_join_minimum_tracks_splitpoints(splt_state *state, int *error)
 
       //if the last segment is small
       long end_time = splt_sp_get_splitpoint_value(state, end_index, error);
-      if (*error < 0) { goto end; }
+      if (*error < 0) { free(indexes_to_remove); goto end; }
       int start_index = end_index - 1;
       long before_end_time = splt_sp_get_splitpoint_value(state, start_index, error);
-      if (*error < 0) { goto end; }
+      if (*error < 0) { free(indexes_to_remove); goto end; }
 
       long track_length = end_time - before_end_time;
       while (track_length < min_track_join)
@@ -564,7 +564,7 @@ void splt_sp_join_minimum_tracks_splitpoints(splt_state *state, int *error)
 
         start_index--;
         track_length = end_time - splt_sp_get_splitpoint_value(state, start_index, error);
-        if (*error < 0) { goto end; }
+        if (*error < 0) { free(indexes_to_remove); goto end; }
       }
       //join last segments
       if (start_index != end_index - 1)
@@ -586,9 +586,9 @@ void splt_sp_join_minimum_tracks_splitpoints(splt_state *state, int *error)
       while (end_join <= end_index)
       {
         long end_join_time = splt_sp_get_splitpoint_value(state, end_join, error);
-        if (*error < 0) { goto end; }
+        if (*error < 0) { free(indexes_to_remove); goto end; }
         long start_join_time = splt_sp_get_splitpoint_value(state, start_join, error);
-        if (*error < 0) { goto end; }
+        if (*error < 0) { free(indexes_to_remove); goto end; }
 
         long track_length = end_join_time - start_join_time;
         while (track_length < min_track_join)
@@ -621,8 +621,10 @@ void splt_sp_join_minimum_tracks_splitpoints(splt_state *state, int *error)
     for (l = 0;l < number_of_indexes_to_remove;l++)
     {
       int err = splt_sp_remove_splitpoint(state, indexes_to_remove[l]);
-      if (err < 0) { *error = err; goto end; }
+      if (err < 0) { *error = err; free(indexes_to_remove); goto end; }
     }
+
+    free(indexes_to_remove);
 
     if (state->split.points->real_splitnumber == 2)
     {

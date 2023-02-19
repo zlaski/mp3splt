@@ -37,6 +37,8 @@
 
 #include "splt.h"
 
+#ifndef _D_NAME_MAX
+
 int scandir(const char *dir, struct dirent ***namelist,
 		int(*filter)(const struct dirent *),
 		int(*compar)(const struct dirent **, const struct dirent **))
@@ -248,6 +250,8 @@ int walphasort(const struct _wdirent **a, const struct _wdirent **b)
 
   return ret;
 }
+
+#endif
 
 static wchar_t *splt_w32_encoding_to_utf16(UINT encoding, const char *source)
 {

@@ -111,7 +111,7 @@ int main(int argc, char **orig_argv)
   bindtextdomain(MP3SPLT_GETTEXT_DOMAIN, "translations");
   bindtextdomain(LIBMP3SPLT_WITH_SONAME, "translations");
 # else
-  #error No NLS detected
+//  #error No NLS detected
 # endif
 
 #else
