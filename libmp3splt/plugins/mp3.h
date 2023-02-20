@@ -47,7 +47,7 @@
 #include <id3tag.h>
 #endif
 
-#include <mad.h>
+#include "mad.h"
 
 /**********************************/
 /* Mp3 structures                 */

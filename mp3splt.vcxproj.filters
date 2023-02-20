@@ -37,6 +37,21 @@
     <None Include="$(ProjectName).post.bat">
       <Filter>Build Files</Filter>
     </None>
+    <None Include="libmp3splt\plugins\sf_table.dat">
+      <Filter>Header Files\libmp3splt</Filter>
+    </None>
+    <None Include="libmp3splt\plugins\qc_table.dat">
+      <Filter>Header Files\libmp3splt</Filter>
+    </None>
+    <None Include="libmp3splt\plugins\rq_table.dat">
+      <Filter>Header Files\libmp3splt</Filter>
+    </None>
+    <None Include="libmp3splt\plugins\imdct_s.dat">
+      <Filter>Header Files\libmp3splt</Filter>
+    </None>
+    <None Include="libmp3splt\plugins\D.dat">
+      <Filter>Header Files\libmp3splt</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="newmp3splt\src\mp3splt.c">
@@ -165,6 +180,45 @@
     <ClCompile Include="libmp3splt\src\wrap.c">
       <Filter>Source Files\libmp3splt</Filter>
     </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\mp3.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\mp3_silence.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\mp3_utils.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\silence_processors.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\bit.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\timer.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\frame.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\layer3.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\layer12.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\stream.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\huffman.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\synth.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
+    <ClCompile Include="libmp3splt\plugins\fixed.c">
+      <Filter>Source Files\libmp3splt</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libmp3splt\src\splt.h">
@@ -288,6 +342,51 @@
       <Filter>Header Files\libmp3splt</Filter>
     </ClInclude>
     <ClInclude Include="libmp3splt\src\wrap.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\mp3.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\mp3_silence.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\mp3_utils.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\silence_processors.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\bit.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\global.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\mad.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\timer.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\stream.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\frame.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\fixed.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\layer12.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\layer3.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\huffman.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\plugins\synth.h">
       <Filter>Header Files\libmp3splt</Filter>
     </ClInclude>
   </ItemGroup>

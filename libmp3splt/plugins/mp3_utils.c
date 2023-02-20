@@ -387,11 +387,11 @@ static unsigned char *splt_mp3_create_new_xing_lame_frame(splt_mp3_state *mp3sta
   unsigned long frame_header = mp3state->first_frame_header_for_reservoir | 0x00010000; //disable crc
   int frame_header_created = SPLT_FALSE;
 
-  struct splt_header first_frame_header;
+  struct splt_header first_frame_header = { 0 };
   first_frame_header = 
     splt_mp3_makehead(frame_header, mp3state->mp3file, first_frame_header, 0);
 
-  struct splt_header h;
+  struct splt_header h = { 0 };
 
   int i = 1;
   for (; i < 15; i++) {
@@ -948,7 +948,7 @@ static void splt_mp3_build_reservoir_frame(splt_mp3_state *mp3state, splt_state 
   for (;bitrate_mask <= 14; bitrate_mask++)
   {
     unsigned long header = (first_frame_header & 0xFFFF0FFF) + (bitrate_mask << 12);
-    struct splt_header h;
+    struct splt_header h = { 0 };
     h = splt_mp3_makehead(header, mp3state->mp3file, h, 0);
 
     if (h.frame_data_space < bytes_in_main_data)
@@ -1043,7 +1043,7 @@ off_t splt_mp3_findhead(splt_mp3_state *mp3state, off_t start)
 off_t splt_mp3_findvalidhead(splt_mp3_state *mp3state, off_t start)
 {
   off_t begin;
-  struct splt_header h;
+  struct splt_header h = { 0 };
 
   begin = splt_mp3_findhead(mp3state, start);
 

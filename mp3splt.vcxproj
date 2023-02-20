@@ -8,16 +8,34 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)libmp3splt\include;%(AdditionalIncludeDirectories);$(OutDir)..\include\</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4005;4013;4018;4047;4090;4100;4115;4127;4133;4206;4244;4267;4305;4456;4459;4702;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <PreprocessorDefinitions>__WIN32__;NO_PCRE;NO_%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)libmp3splt\include;$(ProjectDir)libmp3splt\src;%(AdditionalIncludeDirectories);$(OutDir)..\include\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005;4013;4018;4047;4090;4100;4115;4127;4133;4146;4206;4244;4267;4305;4456;4459;4702;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>__WIN32__;NO_PCRE;NO_ID3TAG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="$(ProjectName).pre.bat" />
     <None Include="$(ProjectName).post.bat" />
+    <None Include="libmp3splt\plugins\D.dat" />
+    <None Include="libmp3splt\plugins\imdct_s.dat" />
+    <None Include="libmp3splt\plugins\qc_table.dat" />
+    <None Include="libmp3splt\plugins\rq_table.dat" />
+    <None Include="libmp3splt\plugins\sf_table.dat" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="libmp3splt\plugins\bit.c" />
+    <ClCompile Include="libmp3splt\plugins\fixed.c" />
+    <ClCompile Include="libmp3splt\plugins\frame.c" />
+    <ClCompile Include="libmp3splt\plugins\huffman.c" />
+    <ClCompile Include="libmp3splt\plugins\layer12.c" />
+    <ClCompile Include="libmp3splt\plugins\layer3.c" />
+    <ClCompile Include="libmp3splt\plugins\mp3.c" />
+    <ClCompile Include="libmp3splt\plugins\mp3_silence.c" />
+    <ClCompile Include="libmp3splt\plugins\mp3_utils.c" />
+    <ClCompile Include="libmp3splt\plugins\silence_processors.c" />
+    <ClCompile Include="libmp3splt\plugins\stream.c" />
+    <ClCompile Include="libmp3splt\plugins\synth.c" />
+    <ClCompile Include="libmp3splt\plugins\timer.c" />
     <ClCompile Include="libmp3splt\src\audacity.c" />
     <ClCompile Include="libmp3splt\src\cddb.c" />
     <ClCompile Include="libmp3splt\src\cddb_cue_common.c" />
@@ -62,6 +80,21 @@
     <ClCompile Include="newmp3splt\src\windows_utils.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="libmp3splt\plugins\bit.h" />
+    <ClInclude Include="libmp3splt\plugins\fixed.h" />
+    <ClInclude Include="libmp3splt\plugins\frame.h" />
+    <ClInclude Include="libmp3splt\plugins\global.h" />
+    <ClInclude Include="libmp3splt\plugins\huffman.h" />
+    <ClInclude Include="libmp3splt\plugins\layer12.h" />
+    <ClInclude Include="libmp3splt\plugins\layer3.h" />
+    <ClInclude Include="libmp3splt\plugins\mad.h" />
+    <ClInclude Include="libmp3splt\plugins\mp3.h" />
+    <ClInclude Include="libmp3splt\plugins\mp3_silence.h" />
+    <ClInclude Include="libmp3splt\plugins\mp3_utils.h" />
+    <ClInclude Include="libmp3splt\plugins\silence_processors.h" />
+    <ClInclude Include="libmp3splt\plugins\stream.h" />
+    <ClInclude Include="libmp3splt\plugins\synth.h" />
+    <ClInclude Include="libmp3splt\plugins\timer.h" />
     <ClInclude Include="libmp3splt\src\audacity.h" />
     <ClInclude Include="libmp3splt\src\cddb.h" />
     <ClInclude Include="libmp3splt\src\cddb_cue_common.h" />
