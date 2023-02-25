@@ -801,7 +801,7 @@ typedef enum {
 /**
  * @brief Default value for the #SPLT_OPT_PARAM_THRESHOLD option
  */
-#define SPLT_DEFAULT_PARAM_THRESHOLD -48.0
+#define SPLT_DEFAULT_PARAM_THRESHOLD -96.0
 /**
  * @brief Default value for the #SPLT_OPT_PARAM_OFFSET option
  */

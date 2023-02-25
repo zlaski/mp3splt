@@ -389,5 +389,11 @@
     <ClInclude Include="libmp3splt\plugins\synth.h">
       <Filter>Header Files\libmp3splt</Filter>
     </ClInclude>
+    <ClInclude Include="libmp3splt\include\libmp3splt\mp3splt.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
+    <ClInclude Include="libmp3splt\include\libmp3splt\version.h">
+      <Filter>Header Files\libmp3splt</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

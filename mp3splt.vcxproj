@@ -80,6 +80,8 @@
     <ClCompile Include="newmp3splt\src\windows_utils.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="libmp3splt\include\libmp3splt\mp3splt.h" />
+    <ClInclude Include="libmp3splt\include\libmp3splt\version.h" />
     <ClInclude Include="libmp3splt\plugins\bit.h" />
     <ClInclude Include="libmp3splt\plugins\fixed.h" />
     <ClInclude Include="libmp3splt\plugins\frame.h" />
