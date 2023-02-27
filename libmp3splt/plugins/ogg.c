@@ -1381,7 +1381,7 @@ end:
 alloced data in splt_plugin_info will be freed by splt_t_state_free()
 at the end of the program 
 */
-void splt_pl_set_plugin_info(splt_plugin_info *info, int *error)
+MP3SPLT_EXPORT void splt_pl_set_plugin_info(splt_plugin_info *info, int *error)
 {
   float plugin_version = 1.0;
 
@@ -1416,7 +1416,7 @@ void splt_pl_set_plugin_info(splt_plugin_info *info, int *error)
 }
 
 //! Plugin API: check if file can be handled by this plugin
-int splt_pl_check_plugin_is_for_file(splt_state *state, int *error)
+MP3SPLT_EXPORT int splt_pl_check_plugin_is_for_file(splt_state *state, int *error)
 {
   char *filename = splt_t_get_filename_to_split(state);
 
@@ -1462,7 +1462,7 @@ int splt_pl_check_plugin_is_for_file(splt_state *state, int *error)
 }
 
 //! Plugin API: Initialize this plugin
-void splt_pl_init(splt_state *state, int *error)
+MP3SPLT_EXPORT void splt_pl_init(splt_state *state, int *error)
 {
   FILE *file_input = NULL;
   char *filename = splt_t_get_filename_to_split(state);
@@ -1489,13 +1489,13 @@ void splt_pl_init(splt_state *state, int *error)
 }
 
 //! Plugin API: Uninitialize this plugin
-void splt_pl_end(splt_state *state, int *error)
+MP3SPLT_EXPORT void splt_pl_end(splt_state *state, int *error)
 {
   splt_ogg_state_free(state);
 }
 
 //! Plugin API: Output a portion of the file
-double splt_pl_split(splt_state *state, const char *final_fname,
+MP3SPLT_EXPORT double splt_pl_split(splt_state *state, const char *final_fname,
     double begin_point, double end_point, int *error, int save_end_point) 
 {
   splt_ogg_put_tags(state, error);
@@ -1517,7 +1517,7 @@ double splt_pl_split(splt_state *state, const char *final_fname,
 }
 
 //! Plugin API: Scan for silence
-int splt_pl_scan_silence(splt_state *state, int *error)
+MP3SPLT_EXPORT int splt_pl_scan_silence(splt_state *state, int *error)
 {
   float offset = splt_o_get_float_option(state,SPLT_OPT_PARAM_OFFSET);
   float threshold = splt_o_get_float_option(state, SPLT_OPT_PARAM_THRESHOLD);
@@ -1535,7 +1535,7 @@ int splt_pl_scan_silence(splt_state *state, int *error)
 }
 
 //! Plugin API: Scan trim using silence
-int splt_pl_scan_trim_silence(splt_state *state, int *error)
+MP3SPLT_EXPORT int splt_pl_scan_trim_silence(splt_state *state, int *error)
 {
   float threshold = splt_o_get_float_option(state, SPLT_OPT_PARAM_THRESHOLD);
   int shots = splt_o_get_int_option(state, SPLT_OPT_PARAM_SHOTS);
@@ -1548,14 +1548,14 @@ int splt_pl_scan_trim_silence(splt_state *state, int *error)
 }
 
 //! Plugin API: Read the original Tags from the file
-void splt_pl_set_original_tags(splt_state *state, int *error)
+MP3SPLT_EXPORT void splt_pl_set_original_tags(splt_state *state, int *error)
 {
   splt_d_print_debug(state,"Taking ogg original tags... \n");
   char *filename = splt_t_get_filename_to_split(state);
   splt_ogg_get_original_tags(filename, state, error);
 }
 
-void splt_pl_clear_original_tags(splt_original_tags *original_tags)
+MP3SPLT_EXPORT void splt_pl_clear_original_tags(splt_original_tags *original_tags)
 {
   vorbis_comment *comment = (vorbis_comment *)original_tags->all_original_tags;
   if (!comment)

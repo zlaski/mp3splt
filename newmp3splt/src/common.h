@@ -38,7 +38,7 @@
 #include <shlwapi.h>
 #endif
 
-#include <libmp3splt/mp3splt.h>
+#include "mp3splt.h"
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

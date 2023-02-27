@@ -45,6 +45,10 @@ should therefore not be too hard a task...
 #include <sys/stat.h>
 #include <string.h>
 
+#ifndef __WIN32__
+#include <ltdl.h>
+#endif
+
 #include "splt.h"
 
 const char splt_id3v1_genres[SPLT_ID3V1_NUMBER_OF_GENRES][25] = {

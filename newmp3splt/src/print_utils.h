@@ -23,7 +23,7 @@
 
 #ifndef PRINT_UTILS_H
 
-#include <libmp3splt/mp3splt.h>
+#include "mp3splt.h"
 
 #include "data_manager.h"
 

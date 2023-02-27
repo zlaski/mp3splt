@@ -8,4 +8,12 @@
     <LocalDebuggerCommandArguments>-r -b d:\music\wurlitzer\Drum-And-Bass\Wen-Commotion.backup.mp3</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommandArguments>-r -b d:\music\wurlitzer\Drum-And-Bass\Wen-Commotion.backup.mp3</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommandArguments>-r -b d:\music\wurlitzer\Drum-And-Bass\Wen-Commotion.backup.mp3</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

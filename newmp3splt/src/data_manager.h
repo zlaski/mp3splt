@@ -23,7 +23,7 @@
 
 #ifndef DATA_MANAGER_H
 
-#include <libmp3splt/mp3splt.h>
+#include "mp3splt.h"
 
 #include "options_manager.h"
 

@@ -37,17 +37,17 @@
 #include <sys/types.h>
 #include <stdlib.h>
 
-#ifndef __WIN32__
-#include <ltdl.h>
+#ifdef __WIN32__
+#define MP3SPLT_EXPORT __declspec(dllexport)
 #else
-#define lt_dlinit() 0
-#define lt_dlclose(handle)
-#define lt_dlopen(filename) 0
-#define lt_dlerror() "*** LTDL NOT LINKED IN ***"
-#define lt_dlsym(handle, name) 0
+#define MP3SPLT_EXPORT
 #endif
 
-#include <libmp3splt/mp3splt.h>
+#ifndef __WIN32__
+#include <ltdl.h>
+#endif
+
+#include "mp3splt.h"
 
 struct _splt_freedb_one_result {
   /**

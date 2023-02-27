@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(registry:HKEY_CURRENT_USER\SOFTWARE\Akisystems\AKIBLD@Sources)akibld-dll.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8209CE49-AE69-4957-84EF-839DC27A8EBD}</ProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\libmp3splt\include\libmp3splt\;$(ProjectDir)..\..\libmp3splt\src;%(AdditionalIncludeDirectories);$(OutDir)..\include\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005;4013;4018;4047;4090;4100;4115;4127;4133;4146;4206;4244;4267;4305;4456;4459;4702;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>__WIN32__;NO_PCRE;NO_ID3TAG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="flac.h" />
+    <ClInclude Include="flac_frame_reader.h" />
+    <ClInclude Include="flac_md5_decoder.h" />
+    <ClInclude Include="flac_metadata.h" />
+    <ClInclude Include="flac_metadata_utils.h" />
+    <ClInclude Include="flac_silence.h" />
+    <ClInclude Include="flac_tags.h" />
+    <ClInclude Include="flac_utils.h" />
+    <ClInclude Include="from_flac_library.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="silence_processors.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="flac.c" />
+    <ClCompile Include="flac_frame_reader.c" />
+    <ClCompile Include="flac_md5_decoder.c" />
+    <ClCompile Include="flac_metadata.c" />
+    <ClCompile Include="flac_metadata_utils.c" />
+    <ClCompile Include="flac_silence.c" />
+    <ClCompile Include="flac_tags.c" />
+    <ClCompile Include="flac_utils.c" />
+    <ClCompile Include="from_flac_library.c" />
+    <ClCompile Include="md5.c" />
+    <ClCompile Include="silence_processors.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ProjectName).pre.bat" />
+    <None Include="$(ProjectName).post.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libmp3splt.vcxproj">
+      <Project>{69322f7e-7f5c-41bf-b825-1650af7cc8bb}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

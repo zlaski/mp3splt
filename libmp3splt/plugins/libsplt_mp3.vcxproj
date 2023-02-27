@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(registry:HKEY_CURRENT_USER\SOFTWARE\Akisystems\AKIBLD@Sources)akibld-dll.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{751D573D-63F8-44D9-966F-D284EF2DDDBC}</ProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\libmp3splt\include\libmp3splt\;$(ProjectDir)..\..\libmp3splt\src;%(AdditionalIncludeDirectories);$(OutDir)..\include\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005;4013;4018;4047;4090;4100;4115;4127;4133;4146;4206;4244;4267;4305;4456;4459;4702;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>__WIN32__;NO_PCRE;NO_ID3TAG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libmp3splt.vcxproj">
+      <Project>{69322f7e-7f5c-41bf-b825-1650af7cc8bb}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bit.h" />
+    <ClInclude Include="fixed.h" />
+    <ClInclude Include="huffman.h" />
+    <ClInclude Include="layer12.h" />
+    <ClInclude Include="layer3.h" />
+    <ClInclude Include="mad.h" />
+    <ClInclude Include="mp3.h" />
+    <ClInclude Include="mp3_silence.h" />
+    <ClInclude Include="mp3_utils.h" />
+    <ClInclude Include="silence_processors.h" />
+    <ClInclude Include="synth.h" />
+    <ClInclude Include="timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bit.c" />
+    <ClCompile Include="fixed.c" />
+    <ClCompile Include="frame.c" />
+    <ClCompile Include="huffman.c" />
+    <ClCompile Include="layer12.c" />
+    <ClCompile Include="layer3.c" />
+    <ClCompile Include="mp3.c" />
+    <ClCompile Include="mp3_silence.c" />
+    <ClCompile Include="mp3_utils.c" />
+    <ClCompile Include="silence_processors.c" />
+    <ClCompile Include="stream.c" />
+    <ClCompile Include="synth.c" />
+    <ClCompile Include="timer.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D.dat" />
+    <None Include="imdct_s.dat" />
+    <None Include="qc_table.dat" />
+    <None Include="rq_table.dat" />
+    <None Include="sf_table.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ProjectName).pre.bat" />
+    <None Include="$(ProjectName).post.bat" />
+  </ItemGroup>
+</Project>

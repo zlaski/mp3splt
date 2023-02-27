@@ -17,18 +17,64 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;y;yy;l;asm;asmx;jav;java;cs;s;m;mm;pl;py;rb;htm;html;xml</Extensions>
     </Filter>
-    <Filter Include="Source Files\libmp3splt">
-      <UniqueIdentifier>{21820ffa-6005-4fdb-bf56-02d03f18f5a5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\newmp3splt">
-      <UniqueIdentifier>{4da3a2ae-fac6-4e40-a184-e4be30fdf3bd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\libmp3splt">
-      <UniqueIdentifier>{2be22b30-ee20-4400-8017-d07a134725b0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\newmp3splt">
-      <UniqueIdentifier>{3213907c-40c7-4ba9-b047-15ff67ce1695}</UniqueIdentifier>
-    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="newmp3splt\src\mp3splt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\data_manager.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\freedb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\options_checker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\options_manager.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\options_parsers.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\print_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newmp3splt\src\windows_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="newmp3splt\src\windows_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\print_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\options_parsers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\options_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\options_checker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\freedb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\data_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newmp3splt\src\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ProjectName).pre.bat">
@@ -37,363 +83,5 @@
     <None Include="$(ProjectName).post.bat">
       <Filter>Build Files</Filter>
     </None>
-    <None Include="libmp3splt\plugins\sf_table.dat">
-      <Filter>Header Files\libmp3splt</Filter>
-    </None>
-    <None Include="libmp3splt\plugins\qc_table.dat">
-      <Filter>Header Files\libmp3splt</Filter>
-    </None>
-    <None Include="libmp3splt\plugins\rq_table.dat">
-      <Filter>Header Files\libmp3splt</Filter>
-    </None>
-    <None Include="libmp3splt\plugins\imdct_s.dat">
-      <Filter>Header Files\libmp3splt</Filter>
-    </None>
-    <None Include="libmp3splt\plugins\D.dat">
-      <Filter>Header Files\libmp3splt</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="newmp3splt\src\mp3splt.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\mp3splt.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\data_manager.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\freedb.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\options_checker.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\options_manager.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\options_parsers.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\print_utils.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\utils.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="newmp3splt\src\windows_utils.c">
-      <Filter>Source Files\newmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\audacity.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\cddb.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\cddb_cue_common.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\checks.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\client.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\conversions.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\cue.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\debug.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\errors.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\filename_regex.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\freedb.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\freedb_utils.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\input_output.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\oformat_parser.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\options.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\output_format.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\pair.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\plugins.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\proxy.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\silence_utils.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\socket_manager.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\split_points.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\splt.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\splt_array.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\string_utils.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\sync_errors.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\tags_parser.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\tags_utils.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\types_func.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\utils.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\win32.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\src\wrap.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\mp3.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\mp3_silence.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\mp3_utils.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\silence_processors.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\bit.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\timer.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\frame.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\layer3.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\layer12.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\stream.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\huffman.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\synth.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-    <ClCompile Include="libmp3splt\plugins\fixed.c">
-      <Filter>Source Files\libmp3splt</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="libmp3splt\src\splt.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\windows_utils.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\utils.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\print_utils.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\options_parsers.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\options_manager.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\options_checker.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\freedb.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\data_manager.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="newmp3splt\src\common.h">
-      <Filter>Header Files\newmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\audacity.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\cddb.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\cddb_cue_common.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\checks.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\client.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\conversions.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\cue.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\debug.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\errors.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\filename_regex.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\freedb.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\freedb_utils.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\input_output.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\oformat_parser.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\options.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\output_format.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\pair.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\plugins.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\proxy.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\silence_utils.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\socket_manager.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\split_points.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\splt_array.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\string_utils.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\sync_errors.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\tags_parser.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\tags_utils.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\types_func.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\utils.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\win32.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\src\wrap.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\mp3.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\mp3_silence.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\mp3_utils.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\silence_processors.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\bit.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\global.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\mad.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\timer.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\stream.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\frame.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\fixed.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\layer12.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\layer3.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\huffman.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\plugins\synth.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\include\libmp3splt\mp3splt.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
-    <ClInclude Include="libmp3splt\include\libmp3splt\version.h">
-      <Filter>Header Files\libmp3splt</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

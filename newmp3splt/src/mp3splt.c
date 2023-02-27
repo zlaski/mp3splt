@@ -110,8 +110,8 @@ int main(int argc, char **orig_argv)
 # ifdef ENABLE_NLS
   bindtextdomain(MP3SPLT_GETTEXT_DOMAIN, "translations");
   bindtextdomain(LIBMP3SPLT_WITH_SONAME, "translations");
-# else
-//  #error No NLS detected
+# elif !defined(__WIN32__)
+  #error No NLS detected
 # endif
 
 #else

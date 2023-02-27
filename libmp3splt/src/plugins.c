@@ -37,6 +37,10 @@ Loading and unloading of plug-ins
 #include <dirent.h>
 #include <errno.h>
 
+#ifndef __WIN32__
+#include <ltdl.h>
+#endif
+
 #include <stdlib.h>
 
 #ifdef __WIN32__
@@ -221,6 +225,7 @@ static int splt_p_scan_dir_for_plugins(splt_state *state, splt_plugins *pl, cons
 
 #ifdef __WIN32__
   struct _wdirent **files = NULL;
+  const wchar_t* wdirectory;
 #else
   struct dirent **files = NULL;
 #endif
@@ -228,7 +233,8 @@ static int splt_p_scan_dir_for_plugins(splt_state *state, splt_plugins *pl, cons
   int number_of_files = 0;
   errno = 0;
 #ifdef __WIN32__
-  number_of_files = wscandir(directory, &files, splt_p_filter_plugin_files, walphasort);
+  wdirectory = splt_w32_utf8_to_utf16(directory);
+  number_of_files = wscandir(wdirectory, &files, splt_p_filter_plugin_files, walphasort);
 #else
   number_of_files = scandir(directory, &files, splt_p_filter_plugin_files, alphasort);
 #endif
